@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload Here We Test Netlify and buddy works pipeline test auto push at netlify.
+          Edit <code>src/App.js</code> and save to reload Here We Test Netlify and buddy works pipeline test auto push at netlify Hello.
         </p>
         <a
           className="App-link"
