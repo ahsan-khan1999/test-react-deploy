@@ -1,24 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import  Message  from './Message';
 
 function App() {
+  let [count, setCount] = useState(0);
+  let [day,setDay] = useState(false)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload Here We Test Netlify and buddy works pipeline test auto push at netlify Hello.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`box ${day ? 'day' : ''}`}>
+
+      <Message count = {count}/>
+      <button onClick={() => setCount(++count)}>Press Me To Increase Count</button>
+      <button onClick={() => setDay(!day)}>Press Me To Change The Day!</button>
+      <button onClick={() => {
+        if(count === 0){
+          alert('you cannot --');
+        }
+        else{
+          setCount(--count)  
+        }
+        
+      }}>Press Me To Decrease Count</button>
+
+
+
     </div>
   );
 }
